@@ -95,7 +95,7 @@ locals {
       ?
       "${module.this.id}-${local.safe_family}" # The name of the new parameter group to be created
       :
-      "default.${var.family}" # Default parameter group name created by AWS
+      null # Use default parameter group created by AWS
     )
   )
 
