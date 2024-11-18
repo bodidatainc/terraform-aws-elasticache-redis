@@ -204,6 +204,7 @@ resource "aws_elasticache_replication_group" "default" {
 
   tags = module.this.tags
 
+  cluster_mode            = var.cluster_mode_enabled ? "enabled" : "disabled"
   num_node_groups         = var.cluster_mode_enabled ? var.cluster_mode_num_node_groups : null
   replicas_per_node_group = var.cluster_mode_enabled ? var.cluster_mode_replicas_per_node_group : null
   user_group_ids          = var.user_group_ids
